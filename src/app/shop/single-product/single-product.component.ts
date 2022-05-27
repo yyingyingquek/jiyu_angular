@@ -8,9 +8,9 @@ import { Product } from '../product.model';
   styleUrls: ['./single-product.component.css'],
 })
 export class SingleProductComponent implements OnInit {
-  @Input() singleProduct: string | undefined;
-  @Input() productIndex: number | undefined;
-  @Input() index: number | undefined;
+  @Input() singleProduct: string;
+  @Input() productIndex: number;
+  @Input() index: number;
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 

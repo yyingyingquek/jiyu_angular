@@ -9,8 +9,8 @@ import { ProductService } from '../product.service';
   styleUrls: ['./product-detail.component.css'],
 })
 export class ProductDetailComponent implements OnInit {
-  productDetails: Product | undefined;
-  id: number | undefined;
+  productDetails: Product;
+  id: number;
 
   constructor(
     private productService: ProductService,
@@ -19,7 +19,7 @@ export class ProductDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log(this.id)
+    console.log(this.id);
     this.route.params.subscribe((params: Params) => {
       this.id = +params['id'];
       this.productDetails = this.productService.getSingleProductDetail(this.id);
