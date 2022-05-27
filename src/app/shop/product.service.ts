@@ -11,10 +11,11 @@ export class ProductService {
   ];
 
   getProducts() {
-      return this.products.slice()
+    return this.products.slice();
   }
 
-  getSingleProduct(index: number) {
-      return this.products[index]
+  getSingleProductDetail(index: number) {
+    console.log(index);
+    return this.products[index];
   }
 }

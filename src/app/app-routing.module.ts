@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { ProductDetailComponent } from './shop/product-detail/product-detail.component';
 import { ShopComponent } from './shop/shop.component';
 import { SingleProductComponent } from './shop/single-product/single-product.component';
 
@@ -11,7 +12,8 @@ const appRoutes: Routes = [
     path: 'shop',
     component: ShopComponent,
     children: [
-      { path: ':id', component: SingleProductComponent }, // localhost/shop/:id
+      // { path: ':id', component: SingleProductComponent },
+      // { path: ':id', component: ProductDetailComponent }, // localhost/shop/:id
     ],
   },
 ];

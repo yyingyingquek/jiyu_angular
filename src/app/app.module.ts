@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SingleProductComponent } from './shop/single-product/single-product.component';
 import { ProductService } from './shop/product.service';
+import { ProductDetailComponent } from './shop/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProductService } from './shop/product.service';
     HomeComponent,
     ShopComponent,
     HeaderComponent,
-    SingleProductComponent
+    SingleProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule, AppRoutingModule

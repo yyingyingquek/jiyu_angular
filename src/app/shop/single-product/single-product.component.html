@@ -1,8 +1,19 @@
-<!-- <p>single-product works!</p> -->
+<p>single-pdt component working</p>
 
 <div class="product-container">
-  <div class="product-card">
+  <div
+    class="product-card"
+    (click)="clickProduct()"
+  
+  >
+    index: {{index}} <br/>
     product id: {{ productIndex }} <br />
     product name: {{ singleProduct }}
   </div>
+ 
 </div>
+<!-- 
+
+   (click)="clickProduct(index)"
+   [routerLink]="[index]"
+ -->

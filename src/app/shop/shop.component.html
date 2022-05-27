@@ -15,9 +15,9 @@
     *ngFor="let productElement of products; let i = index"
     [singleProduct]="productElement.name"
     [productIndex]="productElement.index"
+    [index]="i"
   ></app-single-product>
 </div>
-<!-- <router-outlet></router-outlet> 
-[product]="productElement"
 
--->
+<!-- [product]="productElement" -->
+
