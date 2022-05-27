@@ -1,0 +1,23 @@
+<p>shop works!</p>
+<!-- <div class="product-container">
+  <div
+    class="product-card"
+    *ngFor="let productElement of products; let i = index"
+  >
+    array index: {{ i }} <br />
+    product id: {{ productElement.index }} <br />
+    product name: {{ productElement.name }}
+  </div>
+</div> -->
+
+<div class="product-container">
+  <app-single-product
+    *ngFor="let productElement of products; let i = index"
+    [singleProduct]="productElement.name"
+    [productIndex]="productElement.index"
+  ></app-single-product>
+</div>
+<!-- <router-outlet></router-outlet> 
+[product]="productElement"
+
+-->

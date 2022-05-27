@@ -1,0 +1,6 @@
+.product-card {
+  border: 1px solid black;
+  margin: 0 5px;
+  padding: 0 5px;
+  cursor: pointer;
+}
