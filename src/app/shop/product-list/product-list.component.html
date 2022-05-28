@@ -1,17 +1,13 @@
 <p>product-list component working</p>
 
-<div
-  class="product-container"
-  *ngFor="let productElement of products; let i = index"
->
-  <div class="product-card" routerLink="/shop/{{ i }}">
+<div class="product-container">
+  <div
+    class="product-card"
+    routerLink="/shop/{{ i }}"
+    *ngFor="let productElement of products; let i = index"
+  >
     index: {{ i }} <br />
     product id: {{ productElement.index }} <br />
     product name: {{ productElement.name }}
   </div>
 </div>
-<!-- 
-
-   (click)="clickProduct(index)"
-   [routerLink]="[index]"
- -->
