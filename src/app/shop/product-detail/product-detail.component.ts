@@ -19,11 +19,12 @@ export class ProductDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log(this.id);
+    console.log(`in single product`);
     this.route.params.subscribe((params: Params) => {
       this.id = +params['id'];
       this.productDetails = this.productService.getSingleProductDetail(this.id);
     });
+    console.log(this.id);
   }
 
   // moreProductDetails() {

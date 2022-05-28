@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ShopComponent } from './shop/shop.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
-import { SingleProductComponent } from './shop/single-product/single-product.component';
+import { ProductListComponent } from './shop/product-list/product-list.component';
 import { ProductService } from './shop/product.service';
 import { ProductDetailComponent } from './shop/product-detail/product-detail.component';
 
@@ -16,7 +16,7 @@ import { ProductDetailComponent } from './shop/product-detail/product-detail.com
     HomeComponent,
     ShopComponent,
     HeaderComponent,
-    SingleProductComponent,
+    ProductListComponent,
     ProductDetailComponent
   ],
   imports: [

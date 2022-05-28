@@ -10,7 +10,7 @@
   </div>
 </div> -->
 
-<div class="product-container">
+<!-- <div class="product-container">
   <app-single-product
     *ngFor="let productElement of products; let i = index"
     [singleProduct]="productElement.name"
@@ -18,6 +18,6 @@
     [index]="i"
   ></app-single-product>
 </div>
+<app-product-detail></app-product-detail> -->
 
-<!-- [product]="productElement" -->
-
+<router-outlet></router-outlet>
