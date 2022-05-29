@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Subject, throwError } from 'rxjs';
-import { map, catchError, tap } from 'rxjs/operators';
+import { map, catchError } from 'rxjs/operators';
 
 import { Product } from './product.model';
 
@@ -43,23 +43,17 @@ export class ProductService {
       );
   }
 
-  fetchSingleProduct(index: number) {
-    console.log(index);
-    return this.http
-      .get(
-        `https://jiyu-firebase-default-rtdb.asia-southeast1.firebasedatabase.app/products/${index}.json`
-      )
-      .pipe(
-        map((responseData) => {
-          console.log(responseData);
-          const singleProductFetchArr: Product[] = [];
-          for (const key in responseData) {
-            if (responseData.hasOwnProperty(key)) {
-              singleProductFetchArr.push(responseData[key]);
-            }
-          }
-          return singleProductFetchArr;
-        })
-      );
-  }
+  // fetchSingleProduct(index: number) {
+  //   console.log(index);
+  //   return this.http
+  //     .get(
+  //       `https://jiyu-firebase-default-rtdb.asia-southeast1.firebasedatabase.app/products/${index}.json`
+  //     )
+  //     .pipe(
+  //       map((responseData) => {
+  //         console.log(responseData);
+  //         // return this.productsArr[index];
+  //       })
+  //     );
+  // }
 }
