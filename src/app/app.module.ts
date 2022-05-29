@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProductListComponent } from './shop/product-list/product-list.component';
 import { ProductService } from './shop/product.service';
 import { ProductDetailComponent } from './shop/product-detail/product-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProductDetailComponent } from './shop/product-detail/product-detail.com
     ShopComponent,
     HeaderComponent,
     ProductListComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule, AppRoutingModule, HttpClientModule

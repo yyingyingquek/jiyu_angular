@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductDetailComponent } from './shop/product-detail/product-detail.component';
 import { ShopComponent } from './shop/shop.component';
 import { ProductListComponent } from './shop/product-list/product-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
       { path: ':id', component: ProductDetailComponent }, // localhost/shop/:id
     ],
   },
+  { path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
