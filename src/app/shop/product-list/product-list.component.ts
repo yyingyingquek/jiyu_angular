@@ -13,7 +13,7 @@ import { map } from 'rxjs';
 })
 export class ProductListComponent implements OnInit {
   products: Product[];
-  loadedProducts: Product[] = []
+  loadedProducts: Product[] = [];
   @Input() singleProduct: string;
   @Input() productIndex: number;
   @Input() index: number;
@@ -21,42 +21,18 @@ export class ProductListComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private productService: ProductService,
-    private dataService: DataStorageService,
-    private http: HttpClient,
+    private productService: ProductService
   ) {}
 
   ngOnInit(): void {
-    this.fetchProducts()
+    // this.fetchProducts();
+    this.productService.fetchProducts().subscribe((products) => {
+      this.loadedProducts = products;
+    });
   }
 
   clickProduct() {
     console.log(this.index);
     this.router.navigate([`${this.index}`], { relativeTo: this.route });
-  }
-
-
-
-  private fetchProducts() {
-    this.http
-      .get(
-        'https://jiyu-firebase-default-rtdb.asia-southeast1.firebasedatabase.app/products.json'
-      )
-      .pipe(
-        map((responseData) => {
-          console.log(responseData);
-          const productsArr: Product[] = []
-          for (const key in responseData) {
-            if (responseData.hasOwnProperty(key)) {
-              productsArr.push({...responseData[key], id:key})
-            }
-          }
-          return productsArr
-        })
-      )
-      .subscribe((products) => {
-        console.log(products);
-        this.loadedProducts = products
-      });
   }
 }
