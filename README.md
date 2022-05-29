@@ -1,6 +1,6 @@
 # Jiyu-Angular
 
-A frontend of Jiyū Active, created using Angular. \
+A frontend of Jiyū Active, created using Angular.
 Jiyū Active is a technical apparel e-commerce shop.
 
 ## Development server
@@ -13,9 +13,9 @@ Even during GA times, my classmates have been telling me to learn Angular. Even 
 
 ### Features
 
-The e-commerce page will bring us to be on the homepage on load. Ideally, the homepage should have a carousel. However, I currently only have these few photos on hand and thus, the homepage and shop doesn't really look like much.\
+The e-commerce page will bring us to be on the homepage on load. Ideally, the homepage should have a carousel. However, I currently only have these few photos on hand and thus, the homepage and shop doesn't really look like much.
 
-On navigating to 'Shop' on the navigation bar, done using Angular router module, it fetches all the products from firebase which was created to practice HTTP requests of Angular. \
+On navigating to 'Shop' on the navigation bar, done using Angular router module, it fetches all the products from firebase which was created to practice HTTP requests of Angular.
 
 ### Problems Faced &/or Improvements
 
