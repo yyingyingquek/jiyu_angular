@@ -28,8 +28,14 @@ export class ProductListComponent implements OnInit {
     });
   }
 
-  clickProduct() {
-    console.log(this.index);
-    this.router.navigate([`${this.index}`], { relativeTo: this.route });
-  }
+  // clickProduct(
+
+  // not working
+  // fetchSingleProduct(index: number) {
+  //   index = 0;
+  //   this.productService.fetchSingleProduct(index).subscribe((product) => {
+  //     console.log(product);
+  //   });
+  //   this.router.navigate([`${this.index}`], { relativeTo: this.route });
+  // }
 }
