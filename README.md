@@ -1,11 +1,11 @@
 # Jiyu-Angular
 
-A frontend of Jiyū Active, created using Angular.
+A frontend of Jiyū Active, created using Angular. \
 Jiyū Active is a technical apparel e-commerce shop.
 
 ## Development server
 
-This project is deployed using Netlify, and can be accessed [here](jiyu-angular.netlify.app/).
+This project is deployed using Netlify, and can be accessed [here](https://jiyu-angular.netlify.app/).
 
 ### Motivation
 
@@ -21,5 +21,5 @@ On navigating to 'Shop' on the navigation bar, done using Angular router module,
 
 1. On click of product details, page cannot be refreshed as it will lose all the information.
 2. To complete the full scale app as this is still just a skeleton of what was created in React.
-3. Unable to deploy the backend that was built on heroku (still trying to solve this). Which was why I created a firebase database to fetch products from there.
-4. I forgot how fun vanilla CSS can be as I have been using frameworks since Project 3 of GA cause lazy (lel)
+3. Unable to deploy the backend that was built using Django & PostgreSQL on heroku (still trying to solve this). Which was why I created a firebase database to fetch products from there.
+4. I forgot how fun vanilla CSS can be as I have been using frameworks since Project 3 of GA cause lazy (lel :rofl:)
