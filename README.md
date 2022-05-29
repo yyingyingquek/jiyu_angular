@@ -1,27 +1,25 @@
-# JiyuAngular
+# Jiyu-Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
+A frontend of Jiyū Active, created using Angular. \
+Jiyū Active is a technical apparel e-commerce shop.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project is deployed using Netlify, and can be accessed [here](jiyu-angular.netlify.app/).
 
-## Code scaffolding
+### Motivation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Even during GA times, my classmates have been telling me to learn Angular. Even though I did not do Angular projects during GA, it was fun and challenging to learn and apply it over the past week cause it was kinda like a Project 5.
 
-## Build
+### Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The e-commerce page will bring us to be on the homepage on load. Ideally, the homepage should have a carousel. However, I currently only have these few photos on hand and thus, the homepage and shop doesn't really look like much.\
 
-## Running unit tests
+On navigating to 'Shop' on the navigation bar, done using Angular router module, it fetches all the products from firebase which was created to practice HTTP requests of Angular. \
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Problems Faced &/or Improvements
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. On click of product details, page cannot be refreshed as it will lose all the information.
+2. To complete the full scale app as this is still just a skeleton of what was created in React.
+3. Unable to deploy the backend that was built on heroku (still trying to solve this). Which was why I created a firebase database to fetch products from there.
+4. I forgot how fun vanilla CSS can be as I have been using frameworks since Project 3 of GA cause lazy (lel)
