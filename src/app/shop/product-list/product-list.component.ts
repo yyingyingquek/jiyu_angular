@@ -1,10 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { DataStorageService } from '../data-storage.service';
 import { Product } from '../product.model';
 import { ProductService } from '../product.service';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs';
 
 @Component({
   selector: 'app-single-product',
@@ -25,8 +22,8 @@ export class ProductListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.fetchProducts();
     this.productService.fetchProducts().subscribe((products) => {
+      console.log(products);
       this.loadedProducts = products;
     });
   }

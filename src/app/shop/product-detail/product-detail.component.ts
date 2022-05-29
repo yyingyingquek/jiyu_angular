@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Product } from '../product.model';
 import { ProductService } from '../product.service';
 
@@ -10,24 +10,19 @@ import { ProductService } from '../product.service';
 })
 export class ProductDetailComponent implements OnInit {
   productDetails: Product;
-  id: number;
+  index: number;
 
   constructor(
     private productService: ProductService,
-    private route: ActivatedRoute,
-    private router: Router
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     console.log(`in single product`);
     this.route.params.subscribe((params: Params) => {
-      this.id = +params['id'];
-      this.productDetails = this.productService.getSingleProductDetail(this.id);
+      this.index = +params['id'];
+      this.productDetails = this.productService.getSingleProductDetail(this.index);
     });
-    console.log(this.id);
+    console.log(this.productDetails);
   }
-
-  // moreProductDetails() {
-  //   this.router.navigate([this.id], { relativeTo: this.route });
-  // }
 }
