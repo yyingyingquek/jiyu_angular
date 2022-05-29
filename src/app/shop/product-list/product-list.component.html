@@ -1,13 +1,15 @@
 <p>product-list component working</p>
 
-<div class="product-container">
+<div class="product-container" *ngIf="loadedProducts.length >= 1">
   <div
     class="product-card"
     routerLink="/shop/{{ i }}"
-    *ngFor="let productElement of products; let i = index"
+    *ngFor="let productElement of loadedProducts; let i = index"
   >
     index: {{ i }} <br />
-    product id: {{ productElement.index }} <br />
-    product name: {{ productElement.name }}
+    product id: {{ productElement.id }} <br />
+    product name: {{ productElement.name }} <br />
+    product description: {{ productElement.description }} <br />
+    image: <br /><img src="{{ productElement.image }}" style="width: 200px" />
   </div>
 </div>
