@@ -5,6 +5,7 @@ import { ProductDetailComponent } from './shop/product-detail/product-detail.com
 import { ShopComponent } from './shop/shop.component';
 import { ProductListComponent } from './shop/product-list/product-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProductResolver } from './shop/product-resolver.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,7 +15,7 @@ const appRoutes: Routes = [
     component: ShopComponent,
     children: [
       { path: '', component: ProductListComponent },
-      { path: ':id', component: ProductDetailComponent }, // localhost/shop/:id
+      { path: ':id', component: ProductDetailComponent, resolve:[ProductResolver] }, // localhost/shop/:id
     ],
   },
   { path: '**', component: PageNotFoundComponent}

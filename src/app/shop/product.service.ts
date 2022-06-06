@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Subject, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
@@ -7,10 +7,10 @@ import { Product } from './product.model';
 
 @Injectable()
 export class ProductService {
-  productSelected = new EventEmitter<Product>();
+  productSelected = new Subject<Product>();
   error = new Subject<string>();
 
-  productsArr: Product[] = [];
+  private productsArr: Product[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -19,9 +19,14 @@ export class ProductService {
     return this.productsArr[index];
   }
 
+  getProducts() {
+    console.log(this.productsArr);
+    return this.productsArr.slice();
+  }
+
   fetchProducts() {
     return this.http
-      .get(
+      .get<Product[]>(
         'https://jiyu-firebase-default-rtdb.asia-southeast1.firebasedatabase.app/products.json'
       )
       .pipe(
@@ -31,14 +36,14 @@ export class ProductService {
           const productsFetchedArr: Product[] = [];
           for (const key in responseData) {
             if (responseData.hasOwnProperty(key)) {
-              productsFetchedArr.push({ ...responseData[key], id: key });
-              this.productsArr.push({ ...responseData[key], id: key });
+              productsFetchedArr.push({ ...responseData[key] });
+              this.productsArr.push({ ...responseData[key] });
             }
           }
           return productsFetchedArr;
         }),
         catchError((errorResponse) => {
-          return throwError(errorResponse);
+          return throwError(() => errorResponse);
         })
       );
   }
